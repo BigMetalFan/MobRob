@@ -1,0 +1,80 @@
+
+default-production.elf:	file format elf32-pic
+
+Sections:
+Idx Name                       Size     VMA      Type
+  0                            00000000 00000000 
+  1 text0                      00000052 00001002 TEXT
+  2 idataCOMRAM                00000004 00001054 DATA
+  3 init                       00000004 0000fffc DATA
+  4 reset_vec                  00000004 00000000 DATA
+  5 smallconst                 00000002 00001000 DATA
+  6 dataCOMRAM                 00000005 00000001 BSS
+  7 _stray_data_0_             0000000e 00300000 DATA
+  8 .strtab                    000002eb 00000000 
+  9 .symtab                    00000410 00000000 
+ 10 .debug_abbrev              00000098 00000000 DEBUG
+ 11 .debug_info                000014b2 00000000 DEBUG
+ 12 .debug_line                00000cf0 00000000 DEBUG
+ 13 .debug_pubnames            00000061 00000000 DEBUG
+ 14 .debug_aranges             00000308 00000000 DEBUG
+ 15 .note.microchip.deviceinfo 00000024 00000000 
+ 16 .shstrtab                  000000c1 00000000 
+
+Disassembly of section text0:
+
+00001002 <_main>:
+; __ptext0():
+; D:\PicProj\Proj1\test123\main/main.c:16
+;     ANSELD = 0x00; 
+    1002: 0f 01        	movlb	0xf
+    1004: 3b 6b        	clrf	0x3b, b
+; D:\PicProj\Proj1\test123\main/main.c:17
+;     TRISDbits.TRISD0 = 0;
+    1006: 95 90        	bcf	0x95, 0x0, a
+; D:\PicProj\Proj1\test123\main/main.c:18
+;     TRISDbits.TRISD1 = 1;
+    1008: 95 82        	bsf	0x95, 0x1, a
+; D:\PicProj\Proj1\test123\main/main.c:19
+;     LATDbits.LATD0 = 0;
+    100a: 8c 90        	bcf	0x8c, 0x0, a
+; D:\PicProj\Proj1\test123\main/main.c:22
+;          LATDbits.LATD0 = PORTDbits.RD1;
+    100c: 83 a2        	btfss	0x83, 0x1, a
+    100e: 02 d0        	bra	0x1014
+    1010: 8c 80        	bsf	0x8c, 0x0, a
+    1012: 01 d0        	bra	0x1016
+    1014: 8c 90        	bcf	0x8c, 0x0, a
+; D:\PicProj\Proj1\test123\main/main.c:24
+;         __delay_ms(1);
+    1016: 06 0e        	movlw	0x6
+    1018: 05 6e        	movwf	0x5, a
+    101a: 30 0e        	movlw	0x30
+    101c: e8 2e        	decfsz	0xe8, f, a
+    101e: fe d7        	bra	0x201c
+    1020: 05 2e        	decfsz	0x5, f, a
+    1022: fc d7        	bra	0x201c
+    1024: 00 d0        	bra	0x1026
+    1026: 06 ef 08 f0  	goto	0x100c
+    102a: fe ef 7f f0  	goto	0xfffc
+
+0000102e <start_initialization>:
+; __initialization():
+    102e: 54 0e        	movlw	0x54
+    1030: f6 6e        	movwf	0xf6, a
+    1032: 10 0e        	movlw	0x10
+    1034: f7 6e        	movwf	0xf7, a
+    1036: 00 0e        	movlw	0x0
+    1038: f8 6e        	movwf	0xf8, a
+    103a: 00 ee 01 f0  	lfsr	0x0, 0x1
+    103e: 10 ee 04 f0  	lfsr	0x1, 0x4
+    1042: 09 00        	tblrd	*+
+    1044: f5 cf ee ff  	movff	0xff5, 0xfee
+    1048: e5 50        	movf	0xe5, w, a
+    104a: e1 50        	movf	0xe1, w, a
+    104c: fa e1        	bnz	0x1242
+
+0000104e <end_of_initialization>:
+; __end_of__initialization():
+    104e: 00 01        	movlb	0x0
+    1050: 01 ef 08 f0  	goto	0x1002

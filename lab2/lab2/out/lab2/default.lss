@@ -1,0 +1,1388 @@
+
+default.elf:	file format elf32-pic
+
+Sections:
+Idx Name                       Size     VMA      Type
+  0                            00000000 00000000 
+  1 text4                      000007b0 00001016 TEXT
+  2 cstackCOMRAM               00000039 00000002 BSS
+  3 reset_vec                  00000004 00000000 DATA
+  4 bssBANK0                   00000049 00000060 BSS
+  5 intcode                    000000bc 00000008 TEXT
+  6 init                       00000004 000000c4 DATA
+  7 smallconst                 00000016 00001000 DATA
+  8 dabs$0                     00000001 00000001 BSS
+  9 _stray_data_0_             0000000e 00300000 DATA
+ 10 .strtab                    000009bf 00000000 
+ 11 .symtab                    00000cb0 00000000 
+ 12 .debug_abbrev              00000172 00000000 DEBUG
+ 13 .debug_info                0000276f 00000000 DEBUG
+ 14 .debug_line                00001211 00000000 DEBUG
+ 15 .debug_ranges              000000a0 00000000 DEBUG
+ 16 .debug_pubnames            000002bc 00000000 DEBUG
+ 17 .debug_aranges             00000498 00000000 DEBUG
+ 18 .note.microchip.deviceinfo 00000024 00000000 
+ 19 .shstrtab                  000000dd 00000000 
+
+Disassembly of section text4:
+
+00001016 <_vfpfcnvrt>:
+; __ptext4():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1201
+;     if ((*fmt)[0] == '%') {
+    1016: 15 50        	movf	0x15, w, a
+    1018: d9 6e        	movwf	0xd9, a
+    101a: da 6a        	clrf	0xda, a
+    101c: df cf f6 ff  	movff	0xfdf, 0xff6
+    1020: 08 00        	tblrd	*
+    1022: f5 50        	movf	0xf5, w, a
+    1024: 25 0a        	xorlw	0x25
+    1026: d8 a4        	btfss	0xd8, 0x2, a
+    1028: 18 ef 08 f0  	goto	0x1030
+    102c: 1a ef 08 f0  	goto	0x1034
+    1030: cc ef 08 f0  	goto	0x1198
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1202
+;         ++*fmt;
+    1034: 15 50        	movf	0x15, w, a
+    1036: d9 6e        	movwf	0xd9, a
+    1038: da 6a        	clrf	0xda, a
+    103a: df 2a        	incf	0xdf, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1204
+;         flags = width = 0;
+    103c: 36 6a        	clrf	0x36, a
+    103e: 00 0e        	movlw	0x0
+    1040: 35 6e        	movwf	0x35, a
+    1042: 35 c0 39 f0  	movff	0x35, 0x39
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1205
+;         prec = -1;
+    1046: 37 68        	setf	0x37, a
+    1048: 38 68        	setf	0x38, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1291
+; 		cp = *fmt;
+    104a: 15 50        	movf	0x15, w, a
+    104c: d9 6e        	movwf	0xd9, a
+    104e: da 6a        	clrf	0xda, a
+    1050: df 50        	movf	0xdf, w, a
+    1052: 19 6e        	movwf	0x19, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1361
+; 		if (*cp == 'd' || *cp == 'i') {
+    1054: 19 c0 f6 ff  	movff	0x19, 0xff6
+    1058: 08 00        	tblrd	*
+    105a: f5 50        	movf	0xf5, w, a
+    105c: 64 0a        	xorlw	0x64
+    105e: d8 b4        	btfsc	0xd8, 0x2, a
+    1060: 34 ef 08 f0  	goto	0x1068
+    1064: 36 ef 08 f0  	goto	0x106c
+    1068: 42 ef 08 f0  	goto	0x1084
+    106c: 19 c0 f6 ff  	movff	0x19, 0xff6
+    1070: 08 00        	tblrd	*
+    1072: f5 50        	movf	0xf5, w, a
+    1074: 69 0a        	xorlw	0x69
+    1076: d8 a4        	btfss	0xd8, 0x2, a
+    1078: 40 ef 08 f0  	goto	0x1080
+    107c: 42 ef 08 f0  	goto	0x1084
+    1080: c6 ef 08 f0  	goto	0x118c
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1404
+; 			convarg.sint = (vfpf_sint_t)(int)va_arg(ap, int);
+    1084: 16 50        	movf	0x16, w, a
+    1086: d9 6e        	movwf	0xd9, a
+    1088: da 6a        	clrf	0xda, a
+    108a: 02 0e        	movlw	0x2
+    108c: df 26        	addwf	0xdf, f, a
+    108e: df 5c        	subwf	0xdf, w, a
+    1090: d9 6e        	movwf	0xd9, a
+    1092: da 6a        	clrf	0xda, a
+    1094: de cf 1a f0  	movff	0xfde, 0x1a
+    1098: de cf 1b f0  	movff	0xfde, 0x1b
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1406
+; 			*fmt = cp+1;
+    109c: 15 50        	movf	0x15, w, a
+    109e: d9 6e        	movwf	0xd9, a
+    10a0: da 6a        	clrf	0xda, a
+    10a2: 19 28        	incf	0x19, w, a
+    10a4: df 6e        	movwf	0xdf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1408
+; 			c = sizeof(dbuf);
+    10a6: 20 0e        	movlw	0x20
+    10a8: 1e 6e        	movwf	0x1e, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1409
+; 			done = convarg.sint < 0;
+    10aa: 1b be        	btfsc	0x1b, 0x7, a
+    10ac: 5a ef 08 f0  	goto	0x10b4
+    10b0: 5d ef 08 f0  	goto	0x10ba
+    10b4: 01 0e        	movlw	0x1
+    10b6: 5e ef 08 f0  	goto	0x10bc
+    10ba: 00 0e        	movlw	0x0
+    10bc: 18 6e        	movwf	0x18, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1411
+; 				dbuf[--c] = abs(convarg.sint % 10) + '0';
+    10be: 1e 06        	decf	0x1e, f, a
+    10c0: 1e 50        	movf	0x1e, w, a
+    10c2: 60 0f        	addlw	0x60
+    10c4: d9 6e        	movwf	0xd9, a
+    10c6: da 6a        	clrf	0xda, a
+    10c8: 1a c0 0a f0  	movff	0x1a, 0xa
+    10cc: 1b c0 0b f0  	movff	0x1b, 0xb
+    10d0: 0d 6a        	clrf	0xd, a
+    10d2: 0a 0e        	movlw	0xa
+    10d4: 0c 6e        	movwf	0xc, a
+    10d6: 3c ec 09 f0  	call	0x1278
+    10da: 0a c0 10 f0  	movff	0xa, 0x10
+    10de: 0b c0 11 f0  	movff	0xb, 0x11
+    10e2: 3c ec 0b f0  	call	0x1678
+    10e6: 10 50        	movf	0x10, w, a
+    10e8: 30 0f        	addlw	0x30
+    10ea: df 6e        	movwf	0xdf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1412
+; 				convarg.sint /= 10;
+    10ec: 1a c0 0a f0  	movff	0x1a, 0xa
+    10f0: 1b c0 0b f0  	movff	0x1b, 0xb
+    10f4: 0d 6a        	clrf	0xd, a
+    10f6: 0a 0e        	movlw	0xa
+    10f8: 0c 6e        	movwf	0xc, a
+    10fa: dc ec 08 f0  	call	0x11b8
+    10fe: 0a c0 1a f0  	movff	0xa, 0x1a
+    1102: 0b c0 1b f0  	movff	0xb, 0x1b
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1416
+; 			} while (convarg.sint != 0 && c != 0);
+    1106: 1a 50        	movf	0x1a, w, a
+    1108: 1b 10        	iorwf	0x1b, w, a
+    110a: d8 b4        	btfsc	0xd8, 0x2, a
+    110c: 8a ef 08 f0  	goto	0x1114
+    1110: 8c ef 08 f0  	goto	0x1118
+    1114: 94 ef 08 f0  	goto	0x1128
+    1118: 1e 50        	movf	0x1e, w, a
+    111a: d8 a4        	btfss	0xd8, 0x2, a
+    111c: 92 ef 08 f0  	goto	0x1124
+    1120: 94 ef 08 f0  	goto	0x1128
+    1124: 5f ef 08 f0  	goto	0x10be
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1417
+; 			if (c != 0 && done) {
+    1128: 1e 50        	movf	0x1e, w, a
+    112a: d8 b4        	btfsc	0xd8, 0x2, a
+    112c: 9a ef 08 f0  	goto	0x1134
+    1130: 9c ef 08 f0  	goto	0x1138
+    1134: bb ef 08 f0  	goto	0x1176
+    1138: 18 50        	movf	0x18, w, a
+    113a: d8 b4        	btfsc	0xd8, 0x2, a
+    113c: a2 ef 08 f0  	goto	0x1144
+    1140: a4 ef 08 f0  	goto	0x1148
+    1144: bb ef 08 f0  	goto	0x1176
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1418
+; 				dbuf[--c] = '-';
+    1148: 1e 06        	decf	0x1e, f, a
+    114a: 1e 50        	movf	0x1e, w, a
+    114c: 60 0f        	addlw	0x60
+    114e: d9 6e        	movwf	0xd9, a
+    1150: da 6a        	clrf	0xda, a
+    1152: 2d 0e        	movlw	0x2d
+    1154: df 6e        	movwf	0xdf, a
+    1156: bb ef 08 f0  	goto	0x1176
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1424
+; 				fputc(dbuf[c++], fp);
+    115a: 1e 50        	movf	0x1e, w, a
+    115c: 60 0f        	addlw	0x60
+    115e: d9 6e        	movwf	0xd9, a
+    1160: da 6a        	clrf	0xda, a
+    1162: df 50        	movf	0xdf, w, a
+    1164: 17 6e        	movwf	0x17, a
+    1166: 17 50        	movf	0x17, w, a
+    1168: 0a 6e        	movwf	0xa, a
+    116a: 0b 6a        	clrf	0xb, a
+    116c: 14 c0 0c f0  	movff	0x14, 0xc
+    1170: 93 ec 09 f0  	call	0x1326
+    1174: 1e 2a        	incf	0x1e, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1423
+; 			while (c != sizeof(dbuf)) {
+    1176: 20 0e        	movlw	0x20
+    1178: 1e 18        	xorwf	0x1e, w, a
+    117a: d8 a4        	btfss	0xd8, 0x2, a
+    117c: c2 ef 08 f0  	goto	0x1184
+    1180: c4 ef 08 f0  	goto	0x1188
+    1184: ad ef 08 f0  	goto	0x115a
+    1188: db ef 08 f0  	goto	0x11b6
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1806
+;         ++*fmt;
+    118c: 15 50        	movf	0x15, w, a
+    118e: d9 6e        	movwf	0xd9, a
+    1190: da 6a        	clrf	0xda, a
+    1192: df 2a        	incf	0xdf, f, a
+    1194: db ef 08 f0  	goto	0x11b6
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1811
+;     fputc((int)(*fmt)[0], fp);
+    1198: 15 50        	movf	0x15, w, a
+    119a: d9 6e        	movwf	0xd9, a
+    119c: da 6a        	clrf	0xda, a
+    119e: df cf f6 ff  	movff	0xfdf, 0xff6
+    11a2: 08 00        	tblrd	*
+    11a4: f5 50        	movf	0xf5, w, a
+    11a6: 0a 6e        	movwf	0xa, a
+    11a8: 0b 6a        	clrf	0xb, a
+    11aa: 14 c0 0c f0  	movff	0x14, 0xc
+    11ae: 93 ec 09 f0  	call	0x1326
+    11b2: c6 ef 08 f0  	goto	0x118c
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1814
+; }
+    11b6: 12 00        	return
+
+000011b8 <__ptext9>:
+; __ptext9():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:13
+; 	sign = 0;
+    11b8: 0f 6a        	clrf	0xf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:14
+; 	if(divisor < 0) {
+    11ba: 0d be        	btfsc	0xd, 0x7, a
+    11bc: e4 ef 08 f0  	goto	0x11c8
+    11c0: e2 ef 08 f0  	goto	0x11c4
+    11c4: ea ef 08 f0  	goto	0x11d4
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:15
+; 		divisor = -divisor;
+    11c8: 0c 6c        	negf	0xc, a
+    11ca: 0d 1e        	comf	0xd, f, a
+    11cc: d8 b0        	btfsc	0xd8, 0x0, a
+    11ce: 0d 2a        	incf	0xd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:16
+; 		sign = 1;
+    11d0: 01 0e        	movlw	0x1
+    11d2: 0f 6e        	movwf	0xf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:18
+; 	if(dividend < 0) {
+    11d4: 0b be        	btfsc	0xb, 0x7, a
+    11d6: f1 ef 08 f0  	goto	0x11e2
+    11da: ef ef 08 f0  	goto	0x11de
+    11de: f7 ef 08 f0  	goto	0x11ee
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:19
+; 		dividend = -dividend;
+    11e2: 0a 6c        	negf	0xa, a
+    11e4: 0b 1e        	comf	0xb, f, a
+    11e6: d8 b0        	btfsc	0xd8, 0x0, a
+    11e8: 0b 2a        	incf	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:20
+; 		sign ^= 1;
+    11ea: 01 0e        	movlw	0x1
+    11ec: 0f 1a        	xorwf	0xf, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:22
+; 	quotient = 0;
+    11ee: 11 6a        	clrf	0x11, a
+    11f0: 00 0e        	movlw	0x0
+    11f2: 10 6e        	movwf	0x10, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:23
+; 	if(divisor != 0) {
+    11f4: 0c 50        	movf	0xc, w, a
+    11f6: 0d 10        	iorwf	0xd, w, a
+    11f8: d8 b4        	btfsc	0xd8, 0x2, a
+    11fa: 01 ef 09 f0  	goto	0x1202
+    11fe: 03 ef 09 f0  	goto	0x1206
+    1202: 2b ef 09 f0  	goto	0x1256
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:24
+; 		counter = 1;
+    1206: 01 0e        	movlw	0x1
+    1208: 0e 6e        	movwf	0xe, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:25
+; 		while(((unsigned int)divisor & 0x8000U) == 0) {
+    120a: 0b ef 09 f0  	goto	0x1216
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:26
+; 			divisor <<= 1;
+    120e: d8 90        	bcf	0xd8, 0x0, a
+    1210: 0c 36        	rlcf	0xc, f, a
+    1212: 0d 36        	rlcf	0xd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:27
+; 			counter++;
+    1214: 0e 2a        	incf	0xe, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:25
+; 		while(((unsigned int)divisor & 0x8000U) == 0) {
+    1216: 0d ae        	btfss	0xd, 0x7, a
+    1218: 10 ef 09 f0  	goto	0x1220
+    121c: 12 ef 09 f0  	goto	0x1224
+    1220: 07 ef 09 f0  	goto	0x120e
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:30
+; 			quotient <<= 1;
+    1224: d8 90        	bcf	0xd8, 0x0, a
+    1226: 10 36        	rlcf	0x10, f, a
+    1228: 11 36        	rlcf	0x11, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:31
+; 			if((unsigned int)divisor <= (unsigned int)dividend) {
+    122a: 0c 50        	movf	0xc, w, a
+    122c: 0a 5c        	subwf	0xa, w, a
+    122e: 0d 50        	movf	0xd, w, a
+    1230: 0b 58        	subwfb	0xb, w, a
+    1232: d8 a0        	btfss	0xd8, 0x0, a
+    1234: 1e ef 09 f0  	goto	0x123c
+    1238: 20 ef 09 f0  	goto	0x1240
+    123c: 25 ef 09 f0  	goto	0x124a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:32
+; 				dividend -= divisor;
+    1240: 0c 50        	movf	0xc, w, a
+    1242: 0a 5e        	subwf	0xa, f, a
+    1244: 0d 50        	movf	0xd, w, a
+    1246: 0b 5a        	subwfb	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:33
+; 				quotient |= 1;
+    1248: 10 80        	bsf	0x10, 0x0, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:35
+; 			*(unsigned int *)&divisor >>= 1;
+    124a: d8 90        	bcf	0xd8, 0x0, a
+    124c: 0d 32        	rrcf	0xd, f, a
+    124e: 0c 32        	rrcf	0xc, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:36
+; 		} while(--counter != 0);
+    1250: 0e 2e        	decfsz	0xe, f, a
+    1252: 12 ef 09 f0  	goto	0x1224
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:38
+; 	if(sign)
+    1256: 0f 50        	movf	0xf, w, a
+    1258: d8 b4        	btfsc	0xd8, 0x2, a
+    125a: 31 ef 09 f0  	goto	0x1262
+    125e: 33 ef 09 f0  	goto	0x1266
+    1262: 37 ef 09 f0  	goto	0x126e
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:39
+; 		quotient = -quotient;
+    1266: 10 6c        	negf	0x10, a
+    1268: 11 1e        	comf	0x11, f, a
+    126a: d8 b0        	btfsc	0xd8, 0x0, a
+    126c: 11 2a        	incf	0x11, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:40
+; 	return quotient;
+    126e: 10 c0 0a f0  	movff	0x10, 0xa
+    1272: 11 c0 0b f0  	movff	0x11, 0xb
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awdiv.c:41
+; }
+    1276: 12 00        	return
+
+00001278 <__ptext8>:
+; __ptext8():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:12
+; 	sign = 0;
+    1278: 0f 6a        	clrf	0xf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:13
+; 	if(dividend < 0) {
+    127a: 0b be        	btfsc	0xb, 0x7, a
+    127c: 44 ef 09 f0  	goto	0x1288
+    1280: 42 ef 09 f0  	goto	0x1284
+    1284: 4a ef 09 f0  	goto	0x1294
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:14
+; 		dividend = -dividend;
+    1288: 0a 6c        	negf	0xa, a
+    128a: 0b 1e        	comf	0xb, f, a
+    128c: d8 b0        	btfsc	0xd8, 0x0, a
+    128e: 0b 2a        	incf	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:15
+; 		sign = 1;
+    1290: 01 0e        	movlw	0x1
+    1292: 0f 6e        	movwf	0xf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:17
+; 	if(divisor < 0)
+    1294: 0d be        	btfsc	0xd, 0x7, a
+    1296: 51 ef 09 f0  	goto	0x12a2
+    129a: 4f ef 09 f0  	goto	0x129e
+    129e: 55 ef 09 f0  	goto	0x12aa
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:18
+; 		divisor = -divisor;
+    12a2: 0c 6c        	negf	0xc, a
+    12a4: 0d 1e        	comf	0xd, f, a
+    12a6: d8 b0        	btfsc	0xd8, 0x0, a
+    12a8: 0d 2a        	incf	0xd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:19
+; 	if(divisor != 0) {
+    12aa: 0c 50        	movf	0xc, w, a
+    12ac: 0d 10        	iorwf	0xd, w, a
+    12ae: d8 b4        	btfsc	0xd8, 0x2, a
+    12b0: 5c ef 09 f0  	goto	0x12b8
+    12b4: 5e ef 09 f0  	goto	0x12bc
+    12b8: 82 ef 09 f0  	goto	0x1304
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:20
+; 		counter = 1;
+    12bc: 01 0e        	movlw	0x1
+    12be: 0e 6e        	movwf	0xe, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:21
+; 		while(((unsigned int)divisor & 0x8000U) == 0) {
+    12c0: 66 ef 09 f0  	goto	0x12cc
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:22
+; 			divisor <<= 1;
+    12c4: d8 90        	bcf	0xd8, 0x0, a
+    12c6: 0c 36        	rlcf	0xc, f, a
+    12c8: 0d 36        	rlcf	0xd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:23
+; 			counter++;
+    12ca: 0e 2a        	incf	0xe, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:21
+; 		while(((unsigned int)divisor & 0x8000U) == 0) {
+    12cc: 0d ae        	btfss	0xd, 0x7, a
+    12ce: 6b ef 09 f0  	goto	0x12d6
+    12d2: 6d ef 09 f0  	goto	0x12da
+    12d6: 62 ef 09 f0  	goto	0x12c4
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:26
+; 			if((unsigned int)divisor <= (unsigned int)dividend)
+    12da: 0c 50        	movf	0xc, w, a
+    12dc: 0a 5c        	subwf	0xa, w, a
+    12de: 0d 50        	movf	0xd, w, a
+    12e0: 0b 58        	subwfb	0xb, w, a
+    12e2: d8 a0        	btfss	0xd8, 0x0, a
+    12e4: 76 ef 09 f0  	goto	0x12ec
+    12e8: 78 ef 09 f0  	goto	0x12f0
+    12ec: 7c ef 09 f0  	goto	0x12f8
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:27
+; 				dividend -= divisor;
+    12f0: 0c 50        	movf	0xc, w, a
+    12f2: 0a 5e        	subwf	0xa, f, a
+    12f4: 0d 50        	movf	0xd, w, a
+    12f6: 0b 5a        	subwfb	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:28
+; 			*(unsigned int *)&divisor >>= 1;
+    12f8: d8 90        	bcf	0xd8, 0x0, a
+    12fa: 0d 32        	rrcf	0xd, f, a
+    12fc: 0c 32        	rrcf	0xc, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:29
+; 		} while(--counter != 0);
+    12fe: 0e 2e        	decfsz	0xe, f, a
+    1300: 6d ef 09 f0  	goto	0x12da
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:31
+; 	if(sign)
+    1304: 0f 50        	movf	0xf, w, a
+    1306: d8 b4        	btfsc	0xd8, 0x2, a
+    1308: 88 ef 09 f0  	goto	0x1310
+    130c: 8a ef 09 f0  	goto	0x1314
+    1310: 8e ef 09 f0  	goto	0x131c
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:32
+; 		dividend = -dividend;
+    1314: 0a 6c        	negf	0xa, a
+    1316: 0b 1e        	comf	0xb, f, a
+    1318: d8 b0        	btfsc	0xd8, 0x0, a
+    131a: 0b 2a        	incf	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:33
+; 	return dividend;
+    131c: 0a c0 0a f0  	movff	0xa, 0xa
+    1320: 0b c0 0b f0  	movff	0xb, 0xb
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/awmod.c:34
+; }
+    1324: 12 00        	return
+
+00001326 <_fputc>:
+; _fputc():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:12
+;     if ((fp == stdout) || (fp == stderr)) {
+    1326: 0c 50        	movf	0xc, w, a
+    1328: d8 b4        	btfsc	0xd8, 0x2, a
+    132a: 99 ef 09 f0  	goto	0x1332
+    132e: 9b ef 09 f0  	goto	0x1336
+    1332: a3 ef 09 f0  	goto	0x1346
+    1336: 0c 50        	movf	0xc, w, a
+    1338: d8 a4        	btfss	0xd8, 0x2, a
+    133a: a1 ef 09 f0  	goto	0x1342
+    133e: a3 ef 09 f0  	goto	0x1346
+    1342: a8 ef 09 f0  	goto	0x1350
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:13
+;         putch((char)c);
+    1346: 0a 50        	movf	0xa, w, a
+    1348: e2 ec 0b f0  	call	0x17c4
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:14
+;     } else {
+    134c: e7 ef 09 f0  	goto	0x13ce
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:15
+; 		if((fp->limit == 0) || (fp->count < fp->limit)) {
+    1350: 0c 50        	movf	0xc, w, a
+    1352: d9 6e        	movwf	0xd9, a
+    1354: da 6a        	clrf	0xda, a
+    1356: 09 0e        	movlw	0x9
+    1358: d9 26        	addwf	0xd9, f, a
+    135a: de 50        	movf	0xde, w, a
+    135c: de 10        	iorwf	0xde, w, a
+    135e: d8 b4        	btfsc	0xd8, 0x2, a
+    1360: b4 ef 09 f0  	goto	0x1368
+    1364: b6 ef 09 f0  	goto	0x136c
+    1368: cf ef 09 f0  	goto	0x139e
+    136c: 0c 50        	movf	0xc, w, a
+    136e: d9 6e        	movwf	0xd9, a
+    1370: da 6a        	clrf	0xda, a
+    1372: 09 0e        	movlw	0x9
+    1374: d9 26        	addwf	0xd9, f, a
+    1376: 0c 50        	movf	0xc, w, a
+    1378: e1 6e        	movwf	0xe1, a
+    137a: e2 6a        	clrf	0xe2, a
+    137c: 02 0e        	movlw	0x2
+    137e: e1 26        	addwf	0xe1, f, a
+    1380: de 50        	movf	0xde, w, a
+    1382: e6 5c        	subwf	0xe6, w, a
+    1384: e6 50        	movf	0xe6, w, a
+    1386: 80 0a        	xorlw	0x80
+    1388: 11 6e        	movwf	0x11, a
+    138a: de 50        	movf	0xde, w, a
+    138c: 80 0a        	xorlw	0x80
+    138e: 11 58        	subwfb	0x11, w, a
+    1390: d8 b0        	btfsc	0xd8, 0x0, a
+    1392: cd ef 09 f0  	goto	0x139a
+    1396: cf ef 09 f0  	goto	0x139e
+    139a: e7 ef 09 f0  	goto	0x13ce
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:18
+; 			fp->buffer[fp->count] = (char)c;
+    139e: 0c 50        	movf	0xc, w, a
+    13a0: d9 6e        	movwf	0xd9, a
+    13a2: da 6a        	clrf	0xda, a
+    13a4: 02 0e        	movlw	0x2
+    13a6: d9 26        	addwf	0xd9, f, a
+    13a8: df 50        	movf	0xdf, w, a
+    13aa: 0d 6e        	movwf	0xd, a
+    13ac: 0c 50        	movf	0xc, w, a
+    13ae: d9 6e        	movwf	0xd9, a
+    13b0: da 6a        	clrf	0xda, a
+    13b2: df 50        	movf	0xdf, w, a
+    13b4: 0d 24        	addwf	0xd, w, a
+    13b6: d9 6e        	movwf	0xd9, a
+    13b8: da 6a        	clrf	0xda, a
+    13ba: 0a c0 df ff  	movff	0xa, 0xfdf
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:20
+; 			++fp->count;
+    13be: 0c 50        	movf	0xc, w, a
+    13c0: d9 6e        	movwf	0xd9, a
+    13c2: da 6a        	clrf	0xda, a
+    13c4: 02 0e        	movlw	0x2
+    13c6: d9 26        	addwf	0xd9, f, a
+    13c8: de 2a        	incf	0xde, f, a
+    13ca: 00 0e        	movlw	0x0
+    13cc: dd 22        	addwfc	0xdd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_fputc.c:24
+; }
+    13ce: 12 00        	return
+
+000013d0 <_main>:
+; __end_of_fputc():
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:16
+;     lcdPortInit();
+    13d0: d3 ec 0b f0  	call	0x17a6
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:17
+;     lcdInit();
+    13d4: 38 ec 0a f0  	call	0x1470
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:19
+;     enableInterrupts();
+    13d8: df ec 0b f0  	call	0x17be
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:20
+;     measureInit();
+    13dc: 56 ec 0b f0  	call	0x16ac
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:22
+;     startMeasure();
+    13e0: dc ec 0b f0  	call	0x17b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:27
+;         uint8_t channel = measureResults[0]/342+1;
+    13e4: 80 c0 0a f0  	movff	0x80, 0xa
+    13e8: 81 c0 0b f0  	movff	0x81, 0xb
+    13ec: 01 0e        	movlw	0x1
+    13ee: 0d 6e        	movwf	0xd, a
+    13f0: 56 0e        	movlw	0x56
+    13f2: 0c 6e        	movwf	0xc, a
+    13f4: 78 ec 0a f0  	call	0x14f0
+    13f8: 0a 28        	incf	0xa, w, a
+    13fa: 00 01        	movlb	0x0
+    13fc: a8 6f        	movwf	0xa8, b
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:29
+;         sprintf(chStr, "channel: %d",channel);
+    13fe: 98 0e        	movlw	0x98
+    1400: 23 6e        	movwf	0x23, a
+    1402: 01 0e        	movlw	0x1
+    1404: 24 6e        	movwf	0x24, a
+    1406: a8 c0 25 f0  	movff	0xa8, 0x25
+    140a: 26 6a        	clrf	0x26, a
+    140c: 6f ec 0b f0  	call	0x16de
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:30
+;         sprintf(valStr, "val: %d",measureResults[channel]);
+    1410: 88 0e        	movlw	0x88
+    1412: 23 6e        	movwf	0x23, a
+    1414: 0d 0e        	movlw	0xd
+    1416: 24 6e        	movwf	0x24, a
+    1418: 00 01        	movlb	0x0
+    141a: a8 51        	movf	0xa8, w, b
+    141c: 02 0d        	mullw	0x2
+    141e: f3 50        	movf	0xf3, w, a
+    1420: 80 0f        	addlw	0x80
+    1422: d9 6e        	movwf	0xd9, a
+    1424: da 6a        	clrf	0xda, a
+    1426: de cf 25 f0  	movff	0xfde, 0x25
+    142a: dd cf 26 f0  	movff	0xfdd, 0x26
+    142e: 6f ec 0b f0  	call	0x16de
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:32
+;         lcdClear();
+    1432: d8 ec 0b f0  	call	0x17b0
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:33
+;         lcdSendString(valStr);
+    1436: 88 0e        	movlw	0x88
+    1438: 0d 6e        	movwf	0xd, a
+    143a: 9c ec 0b f0  	call	0x1738
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:34
+;         lcdSetCursor(1,0);
+    143e: 00 0e        	movlw	0x0
+    1440: 0e 6e        	movwf	0xe, a
+    1442: 01 0e        	movlw	0x1
+    1444: b1 ec 0a f0  	call	0x1562
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:35
+;         lcdSendString(chStr);
+    1448: 98 0e        	movlw	0x98
+    144a: 0d 6e        	movwf	0xd, a
+    144c: 9c ec 0b f0  	call	0x1738
+; D:\PicProj\Proj1\lab2\lab2\default\src/main.c:36
+;         __delay_ms(100);
+    1450: 03 0e        	movlw	0x3
+    1452: 34 6e        	movwf	0x34, a
+    1454: 08 0e        	movlw	0x8
+    1456: 33 6e        	movwf	0x33, a
+    1458: 77 0e        	movlw	0x77
+    145a: e8 2e        	decfsz	0xe8, f, a
+    145c: fe d7        	bra	0x245a
+    145e: 33 2e        	decfsz	0x33, f, a
+    1460: fc d7        	bra	0x245a
+    1462: 34 2e        	decfsz	0x34, f, a
+    1464: fa d7        	bra	0x245a
+    1466: 00 00        	nop
+    1468: f2 ef 09 f0  	goto	0x13e4
+    146c: 62 ef 00 f0  	goto	0xc4
+
+00001470 <_lcdInit>:
+; __end_of_main():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:28
+;     __delay_ms(40);
+    1470: d0 0e        	movlw	0xd0
+    1472: 0e 6e        	movwf	0xe, a
+    1474: ca 0e        	movlw	0xca
+    1476: e8 2e        	decfsz	0xe8, f, a
+    1478: fe d7        	bra	0x2476
+    147a: 0e 2e        	decfsz	0xe, f, a
+    147c: fc d7        	bra	0x2476
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:29
+;     LCD_SEND(0x03);
+    147e: 8c 50        	movf	0x8c, w, a
+    1480: 0f 0b        	andlw	0xf
+    1482: 30 09        	iorlw	0x30
+    1484: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:30
+;     lcdClk();
+    1486: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:31
+;     __delay_ms(5);
+    148a: 1a 0e        	movlw	0x1a
+    148c: 0e 6e        	movwf	0xe, a
+    148e: f8 0e        	movlw	0xf8
+    1490: e8 2e        	decfsz	0xe8, f, a
+    1492: fe d7        	bra	0x2490
+    1494: 0e 2e        	decfsz	0xe, f, a
+    1496: fc d7        	bra	0x2490
+    1498: 00 d0        	bra	0x149a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:33
+;     LCD_SEND(0x03);
+    149a: 8c 50        	movf	0x8c, w, a
+    149c: 0f 0b        	andlw	0xf
+    149e: 30 09        	iorlw	0x30
+    14a0: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:34
+;     lcdClk();
+    14a2: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:35
+;     __delay_us(150);
+    14a6: c8 0e        	movlw	0xc8
+    14a8: e8 2e        	decfsz	0xe8, f, a
+    14aa: fe d7        	bra	0x24a8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:37
+;     LCD_SEND(0x03);
+    14ac: 8c 50        	movf	0x8c, w, a
+    14ae: 0f 0b        	andlw	0xf
+    14b0: 30 09        	iorlw	0x30
+    14b2: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:38
+;     lcdClk();
+    14b4: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:39
+;     __delay_us(150);
+    14b8: c8 0e        	movlw	0xc8
+    14ba: e8 2e        	decfsz	0xe8, f, a
+    14bc: fe d7        	bra	0x24ba
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:42
+;     LCD_SEND(0x02);
+    14be: 8c 50        	movf	0x8c, w, a
+    14c0: 0f 0b        	andlw	0xf
+    14c2: 20 09        	iorlw	0x20
+    14c4: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:43
+;     lcdClk();
+    14c6: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:44
+;     __delay_us(150);
+    14ca: c8 0e        	movlw	0xc8
+    14cc: e8 2e        	decfsz	0xe8, f, a
+    14ce: fe d7        	bra	0x24cc
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:47
+;     lcdSendCmd(0x28); // 4 бита, 2 строки, 5x8
+    14d0: 28 0e        	movlw	0x28
+    14d2: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:48
+;     lcdSendCmd(0x08); // Дисплей выключен
+    14d6: 08 0e        	movlw	0x8
+    14d8: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:49
+;     lcdSendCmd(0x01); // Очистка
+    14dc: 01 0e        	movlw	0x1
+    14de: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:50
+;     lcdSendCmd(0x06); // Сдвиг курсора вправо
+    14e2: 06 0e        	movlw	0x6
+    14e4: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:51
+;     lcdSendCmd(0x0C); // Дисплей включён
+    14e8: 0c 0e        	movlw	0xc
+    14ea: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:52
+; }
+    14ee: 12 00        	return
+
+000014f0 <__ptext22>:
+; ___lwdiv():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:13
+; 	quotient = 0;
+    14f0: 10 6a        	clrf	0x10, a
+    14f2: 00 0e        	movlw	0x0
+    14f4: 0f 6e        	movwf	0xf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:14
+; 	if(divisor != 0) {
+    14f6: 0c 50        	movf	0xc, w, a
+    14f8: 0d 10        	iorwf	0xd, w, a
+    14fa: d8 b4        	btfsc	0xd8, 0x2, a
+    14fc: 82 ef 0a f0  	goto	0x1504
+    1500: 84 ef 0a f0  	goto	0x1508
+    1504: ac ef 0a f0  	goto	0x1558
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:15
+; 		counter = 1;
+    1508: 01 0e        	movlw	0x1
+    150a: 0e 6e        	movwf	0xe, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:16
+; 		while((divisor & 0x8000) == 0) {
+    150c: 8c ef 0a f0  	goto	0x1518
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:17
+; 			divisor <<= 1;
+    1510: d8 90        	bcf	0xd8, 0x0, a
+    1512: 0c 36        	rlcf	0xc, f, a
+    1514: 0d 36        	rlcf	0xd, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:18
+; 			counter++;
+    1516: 0e 2a        	incf	0xe, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:16
+; 		while((divisor & 0x8000) == 0) {
+    1518: 0d ae        	btfss	0xd, 0x7, a
+    151a: 91 ef 0a f0  	goto	0x1522
+    151e: 93 ef 0a f0  	goto	0x1526
+    1522: 88 ef 0a f0  	goto	0x1510
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:21
+; 			quotient <<= 1;
+    1526: d8 90        	bcf	0xd8, 0x0, a
+    1528: 0f 36        	rlcf	0xf, f, a
+    152a: 10 36        	rlcf	0x10, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:22
+; 			if(divisor <= dividend) {
+    152c: 0c 50        	movf	0xc, w, a
+    152e: 0a 5c        	subwf	0xa, w, a
+    1530: 0d 50        	movf	0xd, w, a
+    1532: 0b 58        	subwfb	0xb, w, a
+    1534: d8 a0        	btfss	0xd8, 0x0, a
+    1536: 9f ef 0a f0  	goto	0x153e
+    153a: a1 ef 0a f0  	goto	0x1542
+    153e: a6 ef 0a f0  	goto	0x154c
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:23
+; 				dividend -= divisor;
+    1542: 0c 50        	movf	0xc, w, a
+    1544: 0a 5e        	subwf	0xa, f, a
+    1546: 0d 50        	movf	0xd, w, a
+    1548: 0b 5a        	subwfb	0xb, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:24
+; 				quotient |= 1;
+    154a: 0f 80        	bsf	0xf, 0x0, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:26
+; 			divisor >>= 1;
+    154c: d8 90        	bcf	0xd8, 0x0, a
+    154e: 0d 32        	rrcf	0xd, f, a
+    1550: 0c 32        	rrcf	0xc, f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:27
+; 		} while(--counter != 0);
+    1552: 0e 2e        	decfsz	0xe, f, a
+    1554: 93 ef 0a f0  	goto	0x1526
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:29
+; 	return quotient;
+    1558: 0f c0 0a f0  	movff	0xf, 0xa
+    155c: 10 c0 0b f0  	movff	0x10, 0xb
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/lwdiv.c:30
+; }
+    1560: 12 00        	return
+
+00001562 <_lcdSetCursor>:
+; __ptext12():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:62
+; void lcdSetCursor(uint8_t row, uint8_t col)
+    1562: 12 6e        	movwf	0x12, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:64
+;     if (row > 1 || col > 15)
+    1564: 02 0e        	movlw	0x2
+    1566: 12 60        	cpfslt	0x12, a
+    1568: b8 ef 0a f0  	goto	0x1570
+    156c: ba ef 0a f0  	goto	0x1574
+    1570: db ef 0a f0  	goto	0x15b6
+    1574: 0f 0e        	movlw	0xf
+    1576: 0e 64        	cpfsgt	0xe, a
+    1578: c0 ef 0a f0  	goto	0x1580
+    157c: c2 ef 0a f0  	goto	0x1584
+    1580: c4 ef 0a f0  	goto	0x1588
+    1584: db ef 0a f0  	goto	0x15b6
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:67
+;     uint8_t addr = row ? 0x40 : 0x00;
+    1588: 12 50        	movf	0x12, w, a
+    158a: d8 a4        	btfss	0xd8, 0x2, a
+    158c: ca ef 0a f0  	goto	0x1594
+    1590: cc ef 0a f0  	goto	0x1598
+    1594: d1 ef 0a f0  	goto	0x15a2
+    1598: 11 6a        	clrf	0x11, a
+    159a: 00 0e        	movlw	0x0
+    159c: 10 6e        	movwf	0x10, a
+    159e: d4 ef 0a f0  	goto	0x15a8
+    15a2: 11 6a        	clrf	0x11, a
+    15a4: 40 0e        	movlw	0x40
+    15a6: 10 6e        	movwf	0x10, a
+    15a8: 10 c0 0f f0  	movff	0x10, 0xf
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:69
+;     lcdSendCmd(0x80 | (addr + col));
+    15ac: 0f 50        	movf	0xf, w, a
+    15ae: 0e 24        	addwf	0xe, w, a
+    15b0: 80 09        	iorlw	0x80
+    15b2: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:70
+; }
+    15b6: 12 00        	return
+
+000015b8 <_lcdSendCmd>:
+; __ptext18():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:86
+; static void lcdSendCmd(uint8_t cmd){
+    15b8: 0d 6e        	movwf	0xd, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:87
+;     RS_bit = 0;
+    15ba: 8c 90        	bcf	0x8c, 0x0, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:88
+;     lcdSendByte(cmd);
+    15bc: 0d 50        	movf	0xd, w, a
+    15be: 01 ec 0b f0  	call	0x1602
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:89
+;     if (cmd == 0x01 || cmd == 0x02)
+    15c2: 0d 04        	decf	0xd, w, a
+    15c4: d8 b4        	btfsc	0xd8, 0x2, a
+    15c6: e7 ef 0a f0  	goto	0x15ce
+    15ca: e9 ef 0a f0  	goto	0x15d2
+    15ce: f2 ef 0a f0  	goto	0x15e4
+    15d2: 02 0e        	movlw	0x2
+    15d4: 0d 18        	xorwf	0xd, w, a
+    15d6: d8 a4        	btfss	0xd8, 0x2, a
+    15d8: f0 ef 0a f0  	goto	0x15e0
+    15dc: f2 ef 0a f0  	goto	0x15e4
+    15e0: fc ef 0a f0  	goto	0x15f8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:90
+;         __delay_ms(2);
+    15e4: 0b 0e        	movlw	0xb
+    15e6: 0c 6e        	movwf	0xc, a
+    15e8: 62 0e        	movlw	0x62
+    15ea: e8 2e        	decfsz	0xe8, f, a
+    15ec: fe d7        	bra	0x25ea
+    15ee: 0c 2e        	decfsz	0xc, f, a
+    15f0: fc d7        	bra	0x25ea
+    15f2: 00 d0        	bra	0x15f4
+    15f4: 00 ef 0b f0  	goto	0x1600
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:92
+;         __delay_us(50);
+    15f8: 42 0e        	movlw	0x42
+    15fa: e8 2e        	decfsz	0xe8, f, a
+    15fc: fe d7        	bra	0x25fa
+    15fe: 00 d0        	bra	0x1600
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:93
+; }
+    1600: 12 00        	return
+
+00001602 <_lcdSendByte>:
+; _lcdSendByte():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:79
+; static void lcdSendByte(uint8_t byte){
+    1602: 0b 6e        	movwf	0xb, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:80
+;     LCD_SEND(byte>>4);
+    1604: 0b c0 0a f0  	movff	0xb, 0xa
+    1608: 0a 3a        	swapf	0xa, f, a
+    160a: 0f 0e        	movlw	0xf
+    160c: 0a 16        	andwf	0xa, f, a
+    160e: 0f 0e        	movlw	0xf
+    1610: 0a 16        	andwf	0xa, f, a
+    1612: 0a 3a        	swapf	0xa, f, a
+    1614: f0 0e        	movlw	0xf0
+    1616: 0a 16        	andwf	0xa, f, a
+    1618: 8c 50        	movf	0x8c, w, a
+    161a: 0f 0b        	andlw	0xf
+    161c: 0a 10        	iorwf	0xa, w, a
+    161e: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:81
+;     lcdClk();
+    1620: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:82
+;     LCD_SEND(byte);
+    1624: 0b c0 0a f0  	movff	0xb, 0xa
+    1628: 0f 0e        	movlw	0xf
+    162a: 0a 16        	andwf	0xa, f, a
+    162c: 0a 3a        	swapf	0xa, f, a
+    162e: f0 0e        	movlw	0xf0
+    1630: 0a 16        	andwf	0xa, f, a
+    1632: 8c 50        	movf	0x8c, w, a
+    1634: 0f 0b        	andlw	0xf
+    1636: 0a 10        	iorwf	0xa, w, a
+    1638: 8c 6e        	movwf	0x8c, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:83
+;     lcdClk();
+    163a: cc ec 0b f0  	call	0x1798
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:84
+; }
+    163e: 12 00        	return
+
+00001640 <_vfprintf>:
+; _vfprintf():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1822
+;     cfmt = (char *)fmt;
+    1640: 20 c0 22 f0  	movff	0x20, 0x22
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1826
+;     while (*cfmt) {
+    1644: 2c ef 0b f0  	goto	0x1658
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1830
+; 			vfpfcnvrt(fp, &cfmt, ap);
+    1648: 1f c0 14 f0  	movff	0x1f, 0x14
+    164c: 22 0e        	movlw	0x22
+    164e: 15 6e        	movwf	0x15, a
+    1650: 21 c0 16 f0  	movff	0x21, 0x16
+    1654: 0b ec 08 f0  	call	0x1016
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1826
+;     while (*cfmt) {
+    1658: 22 c0 f6 ff  	movff	0x22, 0xff6
+    165c: 08 00        	tblrd	*
+    165e: f5 50        	movf	0xf5, w, a
+    1660: 00 09        	iorlw	0x0
+    1662: d8 a4        	btfss	0xd8, 0x2, a
+    1664: 36 ef 0b f0  	goto	0x166c
+    1668: 38 ef 0b f0  	goto	0x1670
+    166c: 24 ef 0b f0  	goto	0x1648
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1835
+; 	return 0;
+    1670: 20 6a        	clrf	0x20, a
+    1672: 00 0e        	movlw	0x0
+    1674: 1f 6e        	movwf	0x1f, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/doprnt.c:1840
+; }
+    1676: 12 00        	return
+
+00001678 <_abs>:
+; __end_of_vfprintf():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/abs.c:3
+; 	return a<0 ? -a : a;
+    1678: 11 be        	btfsc	0x11, 0x7, a
+    167a: 41 ef 0b f0  	goto	0x1682
+    167e: 43 ef 0b f0  	goto	0x1686
+    1682: 49 ef 0b f0  	goto	0x1692
+    1686: 10 c0 10 f0  	movff	0x10, 0x10
+    168a: 11 c0 11 f0  	movff	0x11, 0x11
+    168e: 55 ef 0b f0  	goto	0x16aa
+    1692: 10 c0 12 f0  	movff	0x10, 0x12
+    1696: 11 c0 13 f0  	movff	0x11, 0x13
+    169a: 12 1e        	comf	0x12, f, a
+    169c: 13 1e        	comf	0x13, f, a
+    169e: 12 4a        	infsnz	0x12, f, a
+    16a0: 13 2a        	incf	0x13, f, a
+    16a2: 12 c0 10 f0  	movff	0x12, 0x10
+    16a6: 13 c0 11 f0  	movff	0x13, 0x11
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/abs.c:4
+; }
+    16aa: 12 00        	return
+
+000016ac <_measureInit>:
+; __ptext10():
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:11
+;     TRISA |= (_TRISA_TRISA0_MASK |
+    16ac: 0f 0e        	movlw	0xf
+    16ae: 92 12        	iorwf	0x92, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:16
+;     ANSELA |= (_ANSELA_ANSA0_MASK |
+    16b0: 0f 0e        	movlw	0xf
+    16b2: 0f 01        	movlb	0xf
+    16b4: 38 13        	iorwf	0x38, f, b
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:21
+;     ADCON0bits.CHS = 0;
+    16b6: 83 0e        	movlw	0x83
+    16b8: c2 16        	andwf	0xc2, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:23
+;     ADCON1bits.PVCFG = 0;
+    16ba: f3 0e        	movlw	0xf3
+    16bc: c1 16        	andwf	0xc1, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:24
+;     ADCON1bits.NVCFG = 0;
+    16be: fc 0e        	movlw	0xfc
+    16c0: c1 16        	andwf	0xc1, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:26
+;     ADCON2bits.ADFM = 1;
+    16c2: c0 8e        	bsf	0xc0, 0x7, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:28
+;     ADCON2bits.ACQT = 0b101;
+    16c4: c0 50        	movf	0xc0, w, a
+    16c6: c7 0b        	andlw	0xc7
+    16c8: 28 09        	iorlw	0x28
+    16ca: c0 6e        	movwf	0xc0, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:30
+;     ADCON2bits.ADCS = 0b110;
+    16cc: c0 50        	movf	0xc0, w, a
+    16ce: f8 0b        	andlw	0xf8
+    16d0: 06 09        	iorlw	0x6
+    16d2: c0 6e        	movwf	0xc0, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:32
+;     ADCON0bits.ADON = 1;
+    16d4: c2 80        	bsf	0xc2, 0x0, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:34
+;     PIE1bits.ADIE = 1;
+    16d6: 9d 8c        	bsf	0x9d, 0x6, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:35
+;     measureTimerInit();
+    16d8: b1 ec 0b f0  	call	0x1762
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:36
+; }
+    16dc: 12 00        	return
+
+000016de <_sprintf>:
+; __end_of_measureInit():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:15
+; 	va_start(ap, fmt);
+    16de: 25 0e        	movlw	0x25
+    16e0: 27 6e        	movwf	0x27, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:16
+; 	f.buffer = s;
+    16e2: 23 c0 28 f0  	movff	0x23, 0x28
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:17
+; 	f.count = 0;
+    16e6: 2b 6a        	clrf	0x2b, a
+    16e8: 00 0e        	movlw	0x0
+    16ea: 2a 6e        	movwf	0x2a, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:18
+; 	f.limit = 0;
+    16ec: 32 6a        	clrf	0x32, a
+    16ee: 00 0e        	movlw	0x0
+    16f0: 31 6e        	movwf	0x31, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:19
+; 	ret = vfprintf(&f, fmt, ap);
+    16f2: 28 0e        	movlw	0x28
+    16f4: 1f 6e        	movwf	0x1f, a
+    16f6: 24 c0 20 f0  	movff	0x24, 0x20
+    16fa: 27 0e        	movlw	0x27
+    16fc: 21 6e        	movwf	0x21, a
+    16fe: 20 ec 0b f0  	call	0x1640
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:20
+; 	s[f.count] = '\0';
+    1702: 23 50        	movf	0x23, w, a
+    1704: 2a 24        	addwf	0x2a, w, a
+    1706: d9 6e        	movwf	0xd9, a
+    1708: da 6a        	clrf	0xda, a
+    170a: df 6a        	clrf	0xdf, a
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/nf_sprintf.c:23
+; }
+    170c: 12 00        	return
+
+0000170e <start_initialization>:
+; __initialization():
+    170e: 00 ee 60 f0  	lfsr	0x0, 0x60
+    1712: 28 0e        	movlw	0x28
+    1714: ee 6a        	clrf	0xee, a
+    1716: e8 06        	decf	0xe8, f, a
+    1718: fd e1        	bnz	0x1914
+    171a: 3a 6a        	clrf	0x3a, a
+    171c: 39 6a        	clrf	0x39, a
+    171e: 38 6a        	clrf	0x38, a
+    1720: 37 6a        	clrf	0x37, a
+    1722: 36 6a        	clrf	0x36, a
+    1724: 35 6a        	clrf	0x35, a
+
+00001726 <end_of_initialization>:
+; __end_of__initialization():
+    1726: 01 90        	bcf	0x1, 0x0, a
+    1728: 01 92        	bcf	0x1, 0x1, a
+    172a: 00 0e        	movlw	0x0
+    172c: f8 6e        	movwf	0xf8, a
+    172e: 10 0e        	movlw	0x10
+    1730: f7 6e        	movwf	0xf7, a
+    1732: 00 01        	movlb	0x0
+    1734: e8 ef 09 f0  	goto	0x13d0
+
+00001738 <_lcdSendString>:
+; __ptext13():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:55
+;     while(*str) lcdSendData(*str++);
+    1738: a5 ef 0b f0  	goto	0x174a
+    173c: 0d 50        	movf	0xd, w, a
+    173e: d9 6e        	movwf	0xd9, a
+    1740: da 6a        	clrf	0xda, a
+    1742: df 50        	movf	0xdf, w, a
+    1744: c2 ec 0b f0  	call	0x1784
+    1748: 0d 2a        	incf	0xd, f, a
+    174a: 0d 50        	movf	0xd, w, a
+    174c: d9 6e        	movwf	0xd9, a
+    174e: da 6a        	clrf	0xda, a
+    1750: df 50        	movf	0xdf, w, a
+    1752: d8 a4        	btfss	0xd8, 0x2, a
+    1754: ae ef 0b f0  	goto	0x175c
+    1758: b0 ef 0b f0  	goto	0x1760
+    175c: 9e ef 0b f0  	goto	0x173c
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:56
+; }
+    1760: 12 00        	return
+
+00001762 <_measureTimerInit>:
+; _measureTimerInit():
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:40
+;     T2CONbits.TMR2ON = 0;
+    1762: ba 94        	bcf	0xba, 0x2, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:42
+;     T2CONbits.T2CKPS = 0b10;    // Prescaler 1:16
+    1764: ba 50        	movf	0xba, w, a
+    1766: fc 0b        	andlw	0xfc
+    1768: 02 09        	iorlw	0x2
+    176a: ba 6e        	movwf	0xba, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:43
+;     T2CONbits.T2OUTPS = 0b0100; // Postscaler 1:5
+    176c: ba 50        	movf	0xba, w, a
+    176e: 87 0b        	andlw	0x87
+    1770: 20 09        	iorlw	0x20
+    1772: ba 6e        	movwf	0xba, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:45
+;     PR2 = 249;             // Период 1 мс до postscaler
+    1774: f9 0e        	movlw	0xf9
+    1776: bb 6e        	movwf	0xbb, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:46
+;     TMR2 = 0;              
+    1778: bc 6a        	clrf	0xbc, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:48
+;     PIR1bits.TMR2IF = 0;   
+    177a: 9e 92        	bcf	0x9e, 0x1, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:49
+;     PIE1bits.TMR2IE = 1;   
+    177c: 9d 82        	bsf	0x9d, 0x1, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:51
+;     INTCONbits.PEIE = 1;
+    177e: f2 8c        	bsf	0xf2, 0x6, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:52
+;     INTCONbits.GIE = 1;
+    1780: f2 8e        	bsf	0xf2, 0x7, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:53
+; }
+    1782: 12 00        	return
+
+00001784 <_lcdSendData>:
+; _lcdSendData():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:95
+; static void lcdSendData(uint8_t cmd){
+    1784: 0c 6e        	movwf	0xc, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:96
+;     RS_bit = 1;
+    1786: 8c 80        	bsf	0x8c, 0x0, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:97
+;     lcdSendByte(cmd);
+    1788: 0c 50        	movf	0xc, w, a
+    178a: 01 ec 0b f0  	call	0x1602
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:98
+;     __delay_us(50);
+    178e: 42 0e        	movlw	0x42
+    1790: e8 2e        	decfsz	0xe8, f, a
+    1792: fe d7        	bra	0x2790
+    1794: 00 d0        	bra	0x1796
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:99
+; }
+    1796: 12 00        	return
+
+00001798 <_lcdClk>:
+; __ptext20():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:74
+;     E_bit = 1;
+    1798: 8c 82        	bsf	0x8c, 0x1, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:75
+;     __delay_us(2);
+    179a: 00 d0        	bra	0x179c
+    179c: 00 d0        	bra	0x179e
+    179e: 00 d0        	bra	0x17a0
+    17a0: 00 d0        	bra	0x17a2
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:76
+;     E_bit = 0;
+    17a2: 8c 92        	bcf	0x8c, 0x1, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:77
+; }
+    17a4: 12 00        	return
+
+000017a6 <_lcdPortInit>:
+; __ptext15():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:11
+;     TRISD &= ~(_TRISD_TRISD0_MASK |
+    17a6: 0c 0e        	movlw	0xc
+    17a8: 95 16        	andwf	0x95, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:18
+;     LATD &= ~(_LATD_LATD0_MASK  |
+    17aa: 0c 0e        	movlw	0xc
+    17ac: 8c 16        	andwf	0x8c, f, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:25
+; }
+    17ae: 12 00        	return
+
+000017b0 <_lcdClear>:
+; __ptext17():
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:59
+;     lcdSendCmd(0x1);
+    17b0: 01 0e        	movlw	0x1
+    17b2: dc ec 0a f0  	call	0x15b8
+; D:\PicProj\Proj1\lab2\lab2\default\src/lcd.c:60
+; }
+    17b6: 12 00        	return
+
+000017b8 <_startMeasure>:
+; _startMeasure():
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:56
+;     measureChannel = 0;
+    17b8: 3a 6a        	clrf	0x3a, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:57
+;     T2CONbits.TMR2ON = 1;
+    17ba: ba 84        	bsf	0xba, 0x2, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/measure.c:58
+; }
+    17bc: 12 00        	return
+
+000017be <_enableInterrupts>:
+; _enableInterrupts():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:4
+;     INTCONbits.PEIE = 1;
+    17be: f2 8c        	bsf	0xf2, 0x6, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:5
+;     INTCONbits.GIE = 1;
+    17c0: f2 8e        	bsf	0xf2, 0x7, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:6
+; }
+    17c2: 12 00        	return
+
+000017c4 <_putch>:
+; _putch():
+; c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common/putch.c:9
+; }
+    17c4: 12 00        	return
+
+Disassembly of section intcode:
+
+00000008 <__pintcode>:
+; __pintcode():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:7
+; void __interrupt() ISR(void)
+       8: 01 82        	bsf	0x1, 0x1, a
+; ___awmod@dividend():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:7
+       a: d9 cf 04 f0  	movff	0xfd9, 0x4
+; lcdSetCursor@col():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:7
+       e: da cf 05 f0  	movff	0xfda, 0x5
+; lcdSetCursor@row():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:7
+      12: f3 cf 06 f0  	movff	0xff3, 0x6
+; vfpfcnvrt@ap():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:7
+      16: f4 cf 07 f0  	movff	0xff4, 0x7
+; vfpfcnvrt@convarg():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:9
+;     if (PIR1bits.TMR2IF &&
+      1a: 9e a2        	btfss	0x9e, 0x1, a
+      1c: 12 ef 00 f0  	goto	0x24
+; vfprintf@fmt():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:9
+      20: 14 ef 00 f0  	goto	0x28
+; sprintf@fmt():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:9
+      24: 26 ef 00 f0  	goto	0x4c
+; sprintf@f():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:9
+      28: 9d a2        	btfss	0x9d, 0x1, a
+      2a: 19 ef 00 f0  	goto	0x32
+      2e: 1b ef 00 f0  	goto	0x36
+      32: 26 ef 00 f0  	goto	0x4c
+; _width():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:12
+;         PIR1bits.TMR2IF = 0;
+      36: 9e 92        	bcf	0x9e, 0x1, a
+; _prec():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:13
+;         ADCON0bits.CHS = measureChannel;
+      38: 3a c0 02 f0  	movff	0x3a, 0x2
+; _measureChannel():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:13
+      3c: 02 46        	rlncf	0x2, f, a
+      3e: 02 46        	rlncf	0x2, f, a
+      40: c2 50        	movf	0xc2, w, a
+      42: 02 18        	xorwf	0x2, w, a
+      44: 83 0b        	andlw	0x83
+      46: 02 18        	xorwf	0x2, w, a
+      48: c2 6e        	movwf	0xc2, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:14
+;         ADCON0bits.GO = 1;
+      4a: c2 82        	bsf	0xc2, 0x1, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:16
+;         if (PIR1bits.ADIF &&
+      4c: 9e ac        	btfss	0x9e, 0x6, a
+      4e: 2b ef 00 f0  	goto	0x56
+      52: 2d ef 00 f0  	goto	0x5a
+      56: 58 ef 00 f0  	goto	0xb0
+      5a: 9d ac        	btfss	0x9d, 0x6, a
+      5c: 32 ef 00 f0  	goto	0x64
+; __pbssBANK0():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:16
+      60: 34 ef 00 f0  	goto	0x68
+      64: 58 ef 00 f0  	goto	0xb0
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:19
+;         PIR1bits.ADIF = 0;
+      68: 9e 9c        	bcf	0x9e, 0x6, a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:20
+;         measureResults[measureChannel] = ((uint16_t)ADRESH << 8) | ADRESL;
+      6a: c4 50        	movf	0xc4, w, a
+      6c: 03 6e        	movwf	0x3, a
+      6e: c3 50        	movf	0xc3, w, a
+      70: 02 6e        	movwf	0x2, a
+      72: 3a 50        	movf	0x3a, w, a
+      74: 02 0d        	mullw	0x2
+      76: f3 50        	movf	0xf3, w, a
+      78: 80 0f        	addlw	0x80
+      7a: d9 6e        	movwf	0xd9, a
+      7c: da 6a        	clrf	0xda, a
+      7e: 02 c0 de ff  	movff	0x2, 0xfde
+; _measureResults():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:20
+      82: 03 c0 dd ff  	movff	0x3, 0xfdd
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:21
+;         measureChannel = measureChannel<(MEASURE_COUNT-1)? measureChannel+1:0;
+      86: 02 0e        	movlw	0x2
+; main@valStr():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:21
+      88: 3a 64        	cpfsgt	0x3a, a
+      8a: 49 ef 00 f0  	goto	0x92
+      8e: 4b ef 00 f0  	goto	0x96
+      92: 50 ef 00 f0  	goto	0xa0
+      96: 09 6a        	clrf	0x9, a
+; main@chStr():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:21
+      98: 00 0e        	movlw	0x0
+      9a: 08 6e        	movwf	0x8, a
+      9c: 56 ef 00 f0  	goto	0xac
+      a0: 01 0e        	movlw	0x1
+      a2: 3a 24        	addwf	0x3a, w, a
+      a4: 08 6e        	movwf	0x8, a
+      a6: 09 6a        	clrf	0x9, a
+; main@channel():
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:21
+      a8: 00 0e        	movlw	0x0
+      aa: 09 22        	addwfc	0x9, f, a
+      ac: 08 c0 3a f0  	movff	0x8, 0x3a
+; D:\PicProj\Proj1\lab2\lab2\default\src/interrupts.c:23
+; }
+      b0: 07 c0 f4 ff  	movff	0x7, 0xff4
+      b4: 06 c0 f3 ff  	movff	0x6, 0xff3
+      b8: 05 c0 da ff  	movff	0x5, 0xfda
+      bc: 04 c0 d9 ff  	movff	0x4, 0xfd9
+      c0: 01 92        	bcf	0x1, 0x1, a
+      c2: 11 00        	retfie	1

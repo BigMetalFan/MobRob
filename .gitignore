@@ -1,0 +1,80 @@
+
+# ==========================================
+# MPLAB Extensions / CMake / Ninja
+# ==========================================
+
+# Build directories
+_build/
+build/
+dist/
+cmake-build-*/
+
+# Generated MPLAB CMake files
+cmake/**/.generated/
+.generated/
+
+# CMake cache and generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+build.ninja
+.ninja_deps
+.ninja_log
+
+# ==========================================
+# XC8 compiler output
+# ==========================================
+
+*.hex
+*.elf
+*.cof
+*.map
+*.lst
+*.o
+*.obj
+*.p1
+*.d
+*.dep
+*.pre
+*.sym
+*.sdb
+
+# ==========================================
+# MPLAB temporary files
+# ==========================================
+
+*.log
+*.tmp
+*.bak
+*.dmp
+
+# ==========================================
+# VS Code
+# ==========================================
+
+# Local editor settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Keep useful shared configurations
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+
+# ==========================================
+# Operating system
+# ==========================================
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ==========================================
+# Python utilities (if used)
+# ==========================================
+
+__pycache__/
+*.pyc
+.venv/

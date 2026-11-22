@@ -1,0 +1,787 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+cinit CODE 0 170E 170E 2A 1 2
+text0 CODE 0 13D0 13D0 A0 1 2
+text1 CODE 0 17B8 17B8 6 1 2
+text2 CODE 0 16DE 16DE 30 1 2
+text3 CODE 0 1640 1640 38 1 2
+text4 CODE 0 1016 1016 1A2 1 2
+text5 CODE 0 1326 1326 AA 1 2
+text6 CODE 0 17C4 17C4 2 1 2
+text7 CODE 0 1678 1678 34 1 2
+text8 CODE 0 1278 1278 AE 1 2
+text9 CODE 0 11B8 11B8 C0 1 2
+text10 CODE 0 16AC 16AC 32 1 2
+text11 CODE 0 1762 1762 22 1 2
+text12 CODE 0 1562 1562 56 1 2
+text13 CODE 0 1738 1738 2A 1 2
+text14 CODE 0 1784 1784 14 1 2
+text15 CODE 0 17A6 17A6 A 1 2
+text16 CODE 0 1470 1470 80 1 2
+text17 CODE 0 17B0 17B0 8 1 2
+text18 CODE 0 15B8 15B8 4A 1 2
+text19 CODE 0 1602 1602 3E 1 2
+text20 CODE 0 1798 1798 E 1 2
+text21 CODE 0 17BE 17BE 6 1 2
+text22 CODE 0 14F0 14F0 72 1 2
+cstackCOMRAM COMRAM 1 2 2 33 1 1
+cstackBANK0 BANK0 1 88 88 21 1 1
+bssBANK0 BANK0 1 60 60 28 1 1
+intcode CODE 0 8 8 BC 1 2
+smallconst SMALLCONST 0 1000 1000 16 1 2
+bssCOMRAM COMRAM 1 35 35 6 1 1
+config CONFIG 4 300000 300000 E 1 1
+$C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+init CODE 0 C4 C4 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 E 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM A9-F37 1
+SFR F38-FFF 1
+BANK0 A9-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST C8-FFF 1
+CONST 17C6-FFFF 1
+IDLOC 200000-200007 1
+SMALLCONST 17C6-FFFF 1
+CODE 4-7 1
+CODE C8-FFF 1
+CODE 17C6-FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F37 1
+BIGRAM 3B-5F 1
+BIGRAM A9-F37 1
+BIGSFR F38-FFF 1
+COMRAM 3B-5F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 17C6-FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+8 intcode CODE >5679:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+8 intcode CODE >7:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+1A intcode CODE >9:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+36 intcode CODE >12:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+38 intcode CODE >13:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+4A intcode CODE >14:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+4C intcode CODE >16:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+68 intcode CODE >19:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+6A intcode CODE >20:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+86 intcode CODE >21:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+B0 intcode CODE >23:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+14F0 text22 CODE >7:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+14F0 text22 CODE >13:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+14F6 text22 CODE >14:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1508 text22 CODE >15:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+150C text22 CODE >16:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1510 text22 CODE >17:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1516 text22 CODE >18:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1518 text22 CODE >16:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1526 text22 CODE >21:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+152C text22 CODE >22:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1542 text22 CODE >23:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+154A text22 CODE >24:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+154C text22 CODE >26:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1552 text22 CODE >27:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1558 text22 CODE >28:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1558 text22 CODE >29:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1560 text22 CODE >30:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+17BE text21 CODE >3:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+17BE text21 CODE >4:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+17C0 text21 CODE >5:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+17C2 text21 CODE >6:D:\PicProj\Proj1\lab2\lab2\default\src\interrupts.c
+1798 text20 CODE >73:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1798 text20 CODE >74:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+179A text20 CODE >75:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17A2 text20 CODE >76:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17A4 text20 CODE >77:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1602 text19 CODE >79:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1604 text19 CODE >80:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1620 text19 CODE >81:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1624 text19 CODE >82:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+163A text19 CODE >83:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+163E text19 CODE >84:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15B8 text18 CODE >86:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15BA text18 CODE >87:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15BC text18 CODE >88:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15C2 text18 CODE >89:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15E4 text18 CODE >90:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15F8 text18 CODE >92:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1600 text18 CODE >93:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17B0 text17 CODE >58:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17B0 text17 CODE >59:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17B6 text17 CODE >60:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1470 text16 CODE >27:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1470 text16 CODE >28:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+147E text16 CODE >29:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1486 text16 CODE >30:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+148A text16 CODE >31:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+149A text16 CODE >33:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14A2 text16 CODE >34:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14A6 text16 CODE >35:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14AC text16 CODE >37:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14B4 text16 CODE >38:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14B8 text16 CODE >39:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14BE text16 CODE >42:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14C6 text16 CODE >43:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14CA text16 CODE >44:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14D0 text16 CODE >47:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14D6 text16 CODE >48:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14DC text16 CODE >49:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14E2 text16 CODE >50:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14E8 text16 CODE >51:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+14EE text16 CODE >52:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17A6 text15 CODE >9:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17A6 text15 CODE >11:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17AA text15 CODE >18:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+17AE text15 CODE >25:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1784 text14 CODE >95:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1786 text14 CODE >96:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1788 text14 CODE >97:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+178E text14 CODE >98:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1796 text14 CODE >99:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1738 text13 CODE >54:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1738 text13 CODE >55:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1760 text13 CODE >56:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1562 text12 CODE >62:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1564 text12 CODE >64:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1588 text12 CODE >67:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15AC text12 CODE >69:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+15B6 text12 CODE >70:D:\PicProj\Proj1\lab2\lab2\default\src\lcd.c
+1762 text11 CODE >38:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1762 text11 CODE >40:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1764 text11 CODE >42:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+176C text11 CODE >43:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1774 text11 CODE >45:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1778 text11 CODE >46:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+177A text11 CODE >48:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+177C text11 CODE >49:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+177E text11 CODE >51:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1780 text11 CODE >52:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+1782 text11 CODE >53:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16AC text10 CODE >9:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16AC text10 CODE >11:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16B0 text10 CODE >16:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16B6 text10 CODE >21:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16BA text10 CODE >23:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16BE text10 CODE >24:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16C2 text10 CODE >26:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16C4 text10 CODE >28:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16CC text10 CODE >30:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16D4 text10 CODE >32:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16D6 text10 CODE >34:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16D8 text10 CODE >35:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+16DC text10 CODE >36:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+11B8 text9 CODE >7:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11B8 text9 CODE >13:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11BA text9 CODE >14:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11C8 text9 CODE >15:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11D0 text9 CODE >16:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11D4 text9 CODE >18:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11E2 text9 CODE >19:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11EA text9 CODE >20:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11EE text9 CODE >22:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+11F4 text9 CODE >23:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1206 text9 CODE >24:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+120A text9 CODE >25:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+120E text9 CODE >26:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1214 text9 CODE >27:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1216 text9 CODE >25:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1224 text9 CODE >30:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+122A text9 CODE >31:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1240 text9 CODE >32:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1248 text9 CODE >33:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+124A text9 CODE >35:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1250 text9 CODE >36:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1256 text9 CODE >38:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1266 text9 CODE >39:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+126E text9 CODE >40:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1276 text9 CODE >41:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+1278 text8 CODE >7:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1278 text8 CODE >12:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+127A text8 CODE >13:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1288 text8 CODE >14:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1290 text8 CODE >15:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1294 text8 CODE >17:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12A2 text8 CODE >18:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12AA text8 CODE >19:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12BC text8 CODE >20:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12C0 text8 CODE >21:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12C4 text8 CODE >22:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12CA text8 CODE >23:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12CC text8 CODE >21:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12DA text8 CODE >26:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12F0 text8 CODE >27:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12F8 text8 CODE >28:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+12FE text8 CODE >29:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1304 text8 CODE >31:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1314 text8 CODE >32:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+131C text8 CODE >33:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1324 text8 CODE >34:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+1678 text7 CODE >1:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\abs.c
+1678 text7 CODE >3:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\abs.c
+16AA text7 CODE >4:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\abs.c
+17C4 text6 CODE >7:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\putch.c
+17C4 text6 CODE >9:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\putch.c
+1326 text5 CODE >8:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+1326 text5 CODE >12:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+1346 text5 CODE >13:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+134C text5 CODE >14:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+1350 text5 CODE >15:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+139E text5 CODE >18:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+13BE text5 CODE >20:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+13CE text5 CODE >24:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+1016 text4 CODE >1177:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1016 text4 CODE >1201:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1034 text4 CODE >1202:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+103C text4 CODE >1204:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1046 text4 CODE >1205:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+104A text4 CODE >1291:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1054 text4 CODE >1361:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1084 text4 CODE >1404:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+109C text4 CODE >1406:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+10A6 text4 CODE >1408:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+10AA text4 CODE >1409:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+10BE text4 CODE >1411:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+10EC text4 CODE >1412:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1106 text4 CODE >1416:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1128 text4 CODE >1417:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1148 text4 CODE >1418:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+115A text4 CODE >1424:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1176 text4 CODE >1423:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+118C text4 CODE >1806:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1198 text4 CODE >1811:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+11B6 text4 CODE >1814:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1640 text3 CODE >1817:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1640 text3 CODE >1822:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1644 text3 CODE >1826:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1648 text3 CODE >1830:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1658 text3 CODE >1826:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1670 text3 CODE >1835:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+1676 text3 CODE >1840:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+16DE text2 CODE >9:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+16DE text2 CODE >15:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+16E2 text2 CODE >16:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+16E6 text2 CODE >17:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+16EC text2 CODE >18:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+16F2 text2 CODE >19:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+1702 text2 CODE >20:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+170C text2 CODE >23:c:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_sprintf.c
+17B8 text1 CODE >55:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+17B8 text1 CODE >56:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+17BA text1 CODE >57:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+17BC text1 CODE >58:D:\PicProj\Proj1\lab2\lab2\default\src\measure.c
+13D0 text0 CODE >15:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13D0 text0 CODE >16:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13D4 text0 CODE >17:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13D8 text0 CODE >19:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13DC text0 CODE >20:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13E0 text0 CODE >22:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13E4 text0 CODE >27:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+13FE text0 CODE >29:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+1410 text0 CODE >30:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+1432 text0 CODE >32:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+1436 text0 CODE >33:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+143E text0 CODE >34:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+1448 text0 CODE >35:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+1450 text0 CODE >36:D:\PicProj\Proj1\lab2\lab2\default\src\main.c
+170E cinit CODE >2279:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+170E cinit CODE >2281:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+170E cinit CODE >2284:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+170E cinit CODE >2310:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1712 cinit CODE >2311:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1714 cinit CODE >2312:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1714 cinit CODE >2313:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1716 cinit CODE >2314:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1718 cinit CODE >2315:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+171A cinit CODE >2318:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+171C cinit CODE >2319:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+171E cinit CODE >2320:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1720 cinit CODE >2321:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1722 cinit CODE >2322:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1724 cinit CODE >2323:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1726 cinit CODE >2329:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1726 cinit CODE >2331:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1728 cinit CODE >2332:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+172A cinit CODE >2334:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+172C cinit CODE >2335:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+172E cinit CODE >2336:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1730 cinit CODE >2337:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1732 cinit CODE >2338:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+1734 cinit CODE >2339:C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_lcdSetCursor$317 10 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv@counter E 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hspace_0 17C6 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hspace_1 A9 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hspace_2 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hspace_4 60000E 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_startMeasure 17BE 0 CODE 0 text1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hibigdata 0 0 CODE 0 ibigdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__mediumconst 1000 0 SMALLCONST 0 smallconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__L__absolute__ 0 0 ABS 0 __absolute__ D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?_abs 10 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?_vfprintf 1F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lsmallconst 1000 0 SMALLCONST 0 smallconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_LATD F8C 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_TMR2 FBC 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___sp 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+_dbuf 60 0 BANK0 1 bssBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_main 13D0 0 CODE 0 text0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_prec 37 0 COMRAM 1 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+abs@a 10 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+btemp 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___stack_hi 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+start C4 0 CODE 0 init C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+__end_of_measureTimerInit 1784 0 CODE 0 text11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hpowerup 0 0 CODE 0 powerup D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_vfpfcnvrt 11B8 0 CODE 0 text4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awmod@sign F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdPortInit 17A6 0 CODE 0 text15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSendData@cmd C 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__accesstop 60 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+intlevel0 0 0 CODE 0 text C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+intlevel1 0 0 CODE 0 text C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+intlevel2 0 0 CODE 0 text C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+intlevel3 0 0 CODE 0 text C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hifardata 0 0 CODE 0 ifardata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv@sign F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hclrtext 0 0 ABS 0 clrtext D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_vfpfcnvrt 1016 0 CODE 0 text4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdSetCursor 1562 0 CODE 0 text12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdSendString 1738 0 CODE 0 text13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ADRESH FC4 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ADRESL FC3 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ANSELA F38 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdInit 14F0 0 CODE 0 text16 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv@dividend A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+lcdSendCmd@cmd D 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+__Hintcode_body 0 0 ABS 0 intcode_body D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdSendByte 1640 0 CODE 0 text19 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdSendData 1798 0 CODE 0 text14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+main@channel A8 0 BANK0 1 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_measureChannel 3A 0 COMRAM 1 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hintcodelo 18 0 CODE 0 intcodelo D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv@divisor C 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of___awdiv 1278 0 CODE 0 text9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of___awmod 1326 0 CODE 0 text8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of___lwdiv 1562 0 CODE 0 text22 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___lwdiv@quotient F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lintcodelo 18 0 CODE 0 intcodelo D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+start_initialization 170E 0 CODE 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdClk 17A6 0 CODE 0 text20 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___rparam_used 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdSetCursor 15B8 0 CODE 0 text12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdSendCmd 15B8 0 CODE 0 text18 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pcstackBANK0 88 0 BANK0 1 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+isa$xinst 0 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+fputc@fp C 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_measureInit 16AC 0 CODE 0 text10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@done 18 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank0 0 0 ABS 0 bank0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank1 0 0 ABS 0 bank1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank2 0 0 ABS 0 bank2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank3 0 0 ABS 0 bank3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank4 0 0 ABS 0 bank4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank5 0 0 ABS 0 bank5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank6 0 0 ABS 0 bank6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank7 0 0 ABS 0 bank7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank8 0 0 ABS 0 bank8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank9 0 0 ABS 0 bank9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hcinit 0 0 ABS 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hconst 0 0 CONST 0 const D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hidata 0 0 CODE 0 idata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hidloc 0 0 ABS 0 idloc D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hnvbit 0 0 COMRAM 1 nvbit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hparam 0 0 COMRAM 1 rparam D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hrdata 0 0 COMRAM 1 rdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hstack 0 0 STACK 2 stack D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext0 0 0 ABS 0 text0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext1 0 0 ABS 0 text1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext2 0 0 ABS 0 text2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext3 0 0 ABS 0 text3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext4 0 0 ABS 0 text4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext5 0 0 ABS 0 text5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext6 0 0 ABS 0 text6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext7 0 0 ABS 0 text7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext8 0 0 ABS 0 text8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext9 0 0 ABS 0 text9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___lwdiv@counter E 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank10 0 0 ABS 0 bank10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank11 0 0 ABS 0 bank11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank12 0 0 ABS 0 bank12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank13 0 0 ABS 0 bank13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank14 0 0 ABS 0 bank14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbank15 0 0 ABS 0 bank15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbigbss 0 0 BIGRAM 1 bigbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbigram 0 0 ABS 0 bigram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbigsfr 0 0 ABS 0 bigsfr D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__smallconst 1000 0 SMALLCONST 0 smallconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_sprintf 170E 0 CODE 0 text2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hcomram 0 0 ABS 0 comram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hconfig 30000E 0 CONFIG 4 config D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank0 0 0 ABS 0 bank0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank1 0 0 ABS 0 bank1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank2 0 0 ABS 0 bank2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank3 0 0 ABS 0 bank3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank4 0 0 ABS 0 bank4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank5 0 0 ABS 0 bank5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank6 0 0 ABS 0 bank6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank7 0 0 ABS 0 bank7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank8 0 0 ABS 0 bank8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank9 0 0 ABS 0 bank9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lcinit 0 0 ABS 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lconst 0 0 CONST 0 const D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lidata 0 0 CODE 0 idata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lidloc 0 0 ABS 0 idloc D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lnvbit 0 0 COMRAM 1 nvbit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lparam 0 0 COMRAM 1 rparam D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lrdata 0 0 COMRAM 1 rdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lstack 0 0 STACK 2 stack D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext0 0 0 ABS 0 text0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext1 0 0 ABS 0 text1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext2 0 0 ABS 0 text2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext3 0 0 ABS 0 text3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext4 0 0 ABS 0 text4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext5 0 0 ABS 0 text5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext6 0 0 ABS 0 text6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext7 0 0 ABS 0 text7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext8 0 0 ABS 0 text8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext9 0 0 ABS 0 text9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hfarbss 0 0 FARRAM 0 farbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lintcode_body 0 0 ABS 0 intcode_body D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_INTCONbits FF2 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdSendString 1762 0 CODE 0 text13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Habs1 0 0 ABS 0 abs1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hdata 0 0 ABS 0 data D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hheap 0 0 HEAP 7 heap D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hinit C8 0 CODE 0 init D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hrbit 0 0 COMRAM 1 rbit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hrbss 0 0 COMRAM 1 rbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htemp 0 0 COMRAM 1 temp D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext 0 0 ABS 0 text D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Labs1 0 0 ABS 0 abs1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ldata 0 0 ABS 0 data D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lheap 0 0 HEAP 7 heap D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Linit C4 0 CODE 0 init D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lrbit 0 0 COMRAM 1 rbit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lrbss 0 0 COMRAM 1 rbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltemp 0 0 COMRAM 1 temp D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext 0 0 ABS 0 text D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+int$flags 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSendString@str D 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hintret 0 0 ABS 0 intret D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hirdata 0 0 CODE 0 irdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ISR 8 0 CODE 0 intcode D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_PR2 FBB 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__S0 17C6 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__S1 A9 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__S4 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__S5 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_abs 1678 0 CODE 0 text7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdSendCmd 1602 0 CODE 0 text18 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdPortInit 17B0 0 CODE 0 text15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbigdata 0 0 BIGRAM 1 bigdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hnvrram 0 0 COMRAM 1 nvrram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+sprintf@fmt 24 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_ISR C4 0 CODE 0 intcode D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_abs 16AC 0 CODE 0 text7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdClear 17B0 0 CODE 0 text17 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lintentry 0 0 ABS 0 intentry D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdInit 1470 0 CODE 0 text16 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hramtop 1000 0 RAM 0 ramtop D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hrparam 0 0 COMRAM 1 rparam D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_lcdClear 17B8 0 CODE 0 text17 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__activetblptr 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hstruct 0 0 COMRAM 1 struct D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext10 0 0 ABS 0 text10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext11 0 0 ABS 0 text11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext12 0 0 ABS 0 text12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext13 0 0 ABS 0 text13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext14 0 0 ABS 0 text14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext15 0 0 ABS 0 text15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext16 0 0 ABS 0 text16 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext17 0 0 ABS 0 text17 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext18 0 0 ABS 0 text18 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext19 0 0 ABS 0 text19 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext20 0 0 ABS 0 text20 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext21 0 0 ABS 0 text21 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Htext22 0 0 ABS 0 text22 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@fmt 15 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdClk 1798 0 CODE 0 text20 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awmod@counter E 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_PIE1bits F9D 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext10 16AC 0 CODE 0 text10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext11 1762 0 CODE 0 text11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext12 1562 0 CODE 0 text12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext13 1738 0 CODE 0 text13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext14 1784 0 CODE 0 text14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext15 17A6 0 CODE 0 text15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext16 1470 0 CODE 0 text16 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext17 17B0 0 CODE 0 text17 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext18 15B8 0 CODE 0 text18 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext19 1602 0 CODE 0 text19 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext20 1798 0 CODE 0 text20 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext21 17BE 0 CODE 0 text21 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext22 14F0 0 CODE 0 text22 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv 11B8 0 CODE 0 text9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awmod 1278 0 CODE 0 text8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___lwdiv 14F0 0 CODE 0 text22 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank10 0 0 ABS 0 bank10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank11 0 0 ABS 0 bank11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank12 0 0 ABS 0 bank12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank13 0 0 ABS 0 bank13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank14 0 0 ABS 0 bank14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbank15 0 0 ABS 0 bank15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbigbss 0 0 BIGRAM 1 bigbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbigram 0 0 ABS 0 bigram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbigsfr 0 0 ABS 0 bigsfr D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSendByte@byte B 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lcomram 0 0 ABS 0 comram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lconfig 0 0 CONFIG 4 config D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_LATDbits F8C 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lsivt_hi 0 0 CODE 0 sivt_hi D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lsivt_lo 18 0 CODE 0 sivt_lo D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lfarbss 0 0 FARRAM 0 farbss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+main@chStr 98 0 BANK0 1 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___lwdiv@divisor C 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lfardata 0 0 FARRAM 0 fardata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+isa$std 1 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+stackhi 0 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+stacklo 0 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+__Lintcode 8 0 CODE 0 intcode D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lintret 0 0 ABS 0 intret D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lirdata 0 0 CODE 0 irdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ADCON0bits FC2 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ADCON1bits FC1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ADCON2bits FC0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lspace_0 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lspace_1 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lspace_2 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lspace_4 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pbssCOMRAM 35 0 COMRAM 1 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_PIR1bits F9E 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@convarg 1A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_measureResults 80 0 BANK0 1 bssBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+end_of_initialization 1726 0 CODE 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lnvrram 0 0 COMRAM 1 nvrram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hintentry 0 0 ABS 0 intentry D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_enableInterrupts 17BE 0 CODE 0 text21 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+fputc@c A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awdiv@quotient 10 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?___awdiv A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?___awmod A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___lwdiv@dividend A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?___lwdiv A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfprintf@fmt 20 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hreset_vec 4 0 CODE 0 reset_vec D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awmod@dividend A 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lramtop 1000 0 RAM 0 ramtop D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lrparam 0 0 COMRAM 1 rparam D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pcinit 170E 0 CODE 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@ap 16 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@cp 19 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@fp 14 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext0 13D0 0 CODE 0 text0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext1 17B8 0 CODE 0 text1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext2 16DE 0 CODE 0 text2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext3 1640 0 CODE 0 text3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext4 1016 0 CODE 0 text4 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext5 1326 0 CODE 0 text5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext6 17C4 0 CODE 0 text6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext7 1678 0 CODE 0 text7 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext8 1278 0 CODE 0 text8 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ptext9 11B8 0 CODE 0 text9 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lstruct 0 0 COMRAM 1 struct D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfprintf@ap 21 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfprintf@fp 1F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSetCursor@col E 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSetCursor@row 12 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfprintf@cfmt 22 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext10 0 0 ABS 0 text10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext11 0 0 ABS 0 text11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext12 0 0 ABS 0 text12 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext13 0 0 ABS 0 text13 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext14 0 0 ABS 0 text14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext15 0 0 ABS 0 text15 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext16 0 0 ABS 0 text16 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext17 0 0 ABS 0 text17 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext18 0 0 ABS 0 text18 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext19 0 0 ABS 0 text19 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext20 0 0 ABS 0 text20 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext21 0 0 ABS 0 text21 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Ltext22 0 0 ABS 0 text22 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+_sprintf 16DE 0 CODE 0 text2 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_vfprintf 1640 0 CODE 0 text3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lpowerup 0 0 CODE 0 powerup D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+sprintf@ap 27 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_measureInit 16DE 0 CODE 0 text10 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__H__absolute__ 0 0 ABS 0 __absolute__ D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__psmallconst 1000 0 SMALLCONST 0 smallconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+lcdSetCursor@addr F 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lreset_vec 0 0 CODE 0 reset_vec D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_vfprintf 1678 0 CODE 0 text3 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___heap_hi 0 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___param_bank 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\Shash\AppData\Local\Temp\xcAsiqs.0\driver_tmp_12.o
+__Hbigdata 0 0 BIGRAM 1 bigdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdSendByte 1602 0 CODE 0 text19 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_lcdSendData 1784 0 CODE 0 text14 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of__initialization 1726 0 CODE 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+___awmod@divisor C 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Libigdata 0 0 CODE 0 ibigdata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_startMeasure 17B8 0 CODE 0 text1 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lclrtext 0 0 ABS 0 clrtext D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+main@valStr 88 0 BANK0 1 cstackBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_ISR$245 8 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_measureTimerInit 1762 0 CODE 0 text11 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+vfpfcnvrt@c 1E 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+sprintf@f 28 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+sprintf@s 23 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_main 1470 0 CODE 0 text0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pintcode 8 0 CODE 0 intcode D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_enableInterrupts 17C4 0 CODE 0 text21 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_fputc 13D0 0 CODE 0 text5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+?_sprintf 23 0 COMRAM 1 cstackCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_TRISA F92 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_TRISD F95 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__end_of_putch 17C6 0 CODE 0 text6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__HRAM 0 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hbss 0 0 RAM 1 bss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hram 0 0 ABS 0 ram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hsfr 0 0 ABS 0 sfr D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__LRAM 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lbss 0 0 RAM 1 bss D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lram 0 0 ABS 0 ram D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lsfr 0 0 ABS 0 sfr D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_flags 39 0 COMRAM 1 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_fputc 1326 0 CODE 0 text5 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_putch 17C4 0 CODE 0 text6 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_width 35 0 COMRAM 1 bssCOMRAM D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hsivt_hi 0 0 CODE 0 sivt_hi D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hsivt_lo 18 0 CODE 0 sivt_lo D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__initialization 170E 0 CODE 0 cinit D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+btemp0 1 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+btemp1 2 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+_T2CONbits FBA 0 ABS 0 - D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hfardata 0 0 FARRAM 0 fardata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hsmallconst 1016 0 SMALLCONST 0 smallconst D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Lifardata 0 0 CODE 0 ifardata D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+__Hintcode C4 0 CODE 0 intcode D:\PicProj\Proj1\lab2\lab2\out\lab2\default.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 1 1
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text4 0 1016 1016 7B0 1
+cstackCOMRAM 1 2 2 39 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 49 1
+intcode 0 8 8 C0 1
+smallconst 0 1000 1000 16 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

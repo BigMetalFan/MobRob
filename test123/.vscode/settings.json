@@ -1,0 +1,16 @@
+{
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}/_build/test123/default",
+    "mplab.clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc8\\v3.10\\bin\\xc8-clangd.exe",
+    "cmake.sourceDirectory": "D:/PicProj/Proj1/test123/cmake/test123/default",
+    "memory-inspector.debugTypes": [
+        "arm-debugger",
+        "embedded-debug",
+        "gdb",
+        "gdbtarget",
+        "mplab-core-da"
+    ],
+    "C_Cpp.intelliSenseEngine": "disabled"
+}
